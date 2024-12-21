@@ -1,9 +1,9 @@
 import { Position, Hex, Cell, Model, PriorityQueue, QueueElement } from "./data_structures"
 import { getHexVertex, hexToPixel, mapPixelToHex, isHexInGrid, findNeighborHexes} from "./hex_utils"
 
-const HEXSIZE = 30
+const HEXSIZE = 20
 const HEXORIGIN = {x:725,y:350}
-const GRID_RADIUS = 6
+const GRID_RADIUS = 10
 const generateMazeBtn = <HTMLButtonElement>document.getElementById("maze_generator")
 const findPathBtn = <HTMLButtonElement>document.getElementById("path_finder")
 let pathPosition : Hex[]
@@ -169,12 +169,12 @@ function paintSelectedCell(hex: Hex, color: string, counter:number=-1) {
     const center = hexToPixel(hex, HEXSIZE, HEXORIGIN)
 
     ctx.beginPath()
-
-    const startVtx = getHexVertex(center, HEXSIZE-5, 0)
+   
+    const startVtx = getHexVertex(center, HEXSIZE, 0)
     ctx.moveTo(startVtx.x, startVtx.y)
 
     for (let i = 1; i <= 6; i++){
-        const vertex = getHexVertex(center, HEXSIZE-5, i%6)
+        const vertex = getHexVertex(center, HEXSIZE, i%6)
         ctx.lineTo(vertex.x, vertex.y)
     }
 
