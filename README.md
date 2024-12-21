@@ -25,11 +25,11 @@ I am sure if you google it, you will find this amazing website made by Red Blob 
 
 Most of the math related to this code is in pointy-top hexagon shape. All of the Math can be found in that website. If you want to understand what I used, please check out the [Geometry](https://www.redblobgames.com/grids/hexagons/#basics), [Coordinate systems](https://www.redblobgames.com/grids/hexagons/#coordinates), [Conversions](https://www.redblobgames.com/grids/hexagons/#conversions), [Neighbors](https://www.redblobgames.com/grids/hexagons/#neighbors), [Hex to pixel](https://www.redblobgames.com/grids/hexagons/#hex-to-pixel), and, [Pixel to hex](https://www.redblobgames.com/grids/hexagons/#pixel-to-hex) sections.
 
-As for the coordinate systems, I went with the axial coordinates.
+As for the coordinate systems, I went with axial coordinates.
 
 ## Maze Generation
 
-Arguably, this step took me the longest while doing this project because of the overlap between wall removing and hexagon math for it. I was confused most of the time but it worked out in this.
+By far, this step took me the longest while coding this project because of the overlap between wall removing and hexagon math for it. I was confused most of the time but it worked the math for the `removeWall` and `commonWall` function by hand to understand what is going wrong.
 
 As for the algorithm, I made use of Randomized DFS (iterative implementation with stack) to create a guaranteed solvable maze. For this, I refered to the Wikipedia resource on [Maze Generation algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm).
 
@@ -47,4 +47,4 @@ npm run start
 
 ## Future works, maybe?
 
-If i want to revist this again, I will implement other path finding algorithms and maybe add more functionality and coloring. Feel free to take this code and make it better or whatever.
+If i want to revist this again, I will implement other path finding algorithms, clean up the data structure files (I think I am doing some unnecessary work with the `Cell`), and maybe add more functionality and coloring. Feel free to take this code and make it better.
