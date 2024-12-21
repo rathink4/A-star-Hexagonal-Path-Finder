@@ -1,6 +1,6 @@
 # A* Hexagonal Path Finder
 
-I made this project with the intention of learing 3 things.
+I made this project with the intention of learning 3 things.
 1. How to use hexagons and the math behind it when coding them.
 2. How to generate a honeycomb maze.
 3. How to implement A* algorithm to find a path between two points.
